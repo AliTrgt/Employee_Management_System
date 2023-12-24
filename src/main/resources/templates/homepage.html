@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+        <h1 style="text-align:center">Employee Management System</h1>
+        <table class="table table-striped table-bordered table-hover">
+            <a th:href="@{/addPage}" class="btn btn-primary btn-md  mb-2">Add Employee</a>
+            <thead class="thead-dark">
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Salary</th>
+                <th>E-mail</th>
+                <th>Operations</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each = "tempEmployee : ${employee}">
+                <td th:text="${tempEmployee.id}"/>
+                <td th:text="${tempEmployee.firstName}"/>
+                <td th:text = "${tempEmployee.lastName}"/>
+                <td th:text="${tempEmployee.salary}"/>
+                <td th:text="${tempEmployee.email}"/>
+                <td>
+                    <a th:href="@{/update(employeeId = ${tempEmployee.id})}" class="btn btn-warning btn-md">Update</a>
+
+                    <a th:href="@{/delete(employeeId = ${tempEmployee.id})}" class="btn btn-danger btn-md" onclick="if(!(confirm('Do you want to delete this message ? '))) return false">Remove</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

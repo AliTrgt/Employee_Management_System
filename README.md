@@ -1,6 +1,10 @@
 # Employee Management System
 
-Bu proje, Java Spring Boot kullanılarak geliştirilmiş bir Employee Management System uygulamasıdır. Projede Thymeleaf, JPA-Hibernate, MySQL ve Bootstrap kullanılmıştır. Ayrıca, geliştirme sürecini kolaylaştırmak için Spring Boot DevTools de projeye eklenmiştir.
+Bu proje, Java Spring Boot kullanılarak geliştirilmiş bir Employee Management System uygulamasıdır. Proje Temel Crud İşlemlerini Gerçekleştirmektedir CREATE,READ,UPDATE,DELETE gibi endpointler oluşturulmuştur.Bu endpointlerden gerekli işlemler yapılmaktadır.Projenin arka tarafı spring-boot,hibernate,mysql gibi teknolojilerle yazılmıştır önyüzde thyemeleaf ve bootstrap kullanılmıştır.Temel Bir Uygulama Olduğu İçin Dockerize Edilmemiştir ve Dto katmanı kullanılmamıştır.
+
+<img src="images/Ekran Resmi 2023-12-24 15.40.44.png" alt="Proje Örneği" width="1000"/>
+<img src="images/Ekran Resmi 2023-12-24 15.40.52.png" alt="Proje Örneği" width="1000"/> 
+<img src="images/Ekran Resmi 2023-12-24 15.41.12.png" alt="Proje Örneği" width="1000"/>
 
 ## Özellikler
 
@@ -10,12 +14,15 @@ Bu proje, Java Spring Boot kullanılarak geliştirilmiş bir Employee Management
 - JPA-Hibernate ile veritabanı işlemlerini yönetme
 - Bootstrap ile basit ve kullanıcı dostu bir arayüz tasarımı
 
-## Gereksinimler
+## Kullanılan Teknolojiler
 
-- Java 8 veya üstü
+- Java Spring Boot
 - Maven
 - MySQL
-- Spring Boot
+- JPA-Hibernate
+- Thymeleaf
+- Bootstrap
+  
 
 ## Projeyi Çalıştırma
 
